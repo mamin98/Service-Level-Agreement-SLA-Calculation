@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SLA.Application/bin/Debug/net8.0
+/SLA.Application/obj
+/SLA.Domain/bin/Debug/net8.0
+/SLA.Domain/obj
+/SLA.Infrastructure/bin/Debug/net8.0
+/SLA.Infrastructure/obj
+/.vs
+/Service Level Agreement (SLA)/.vs/Service Level Agreement (SLA)
+/Service Level Agreement (SLA)/bin/Debug/net8.0
+/Service Level Agreement (SLA)/obj

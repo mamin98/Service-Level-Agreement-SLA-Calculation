@@ -1,0 +1,6 @@
+@Service_Level_Agreement__SLA__HostAddress = http://localhost:5159
+
+GET {{Service_Level_Agreement__SLA__HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
