@@ -7,12 +7,12 @@ public class Complaint : BaseEntity
 {
     [Required]
     [EnumDataType(typeof(PriorityType))]
-    public PriorityType Priority { get; set; }
+    public PriorityType Priority { get; private set; }
 
     [Required]
-    public DateTime CapturedAt { get; set; }
+    public DateTime CapturedAt { get; private set; }
 
-    public DateTime? ResolutionDeadline { get; set; }
+    public DateTime? ResolutionDeadline { get; private set; }
 
     public static Complaint CreateNew() => new();
 

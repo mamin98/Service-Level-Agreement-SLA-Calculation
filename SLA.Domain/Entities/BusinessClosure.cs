@@ -12,4 +12,22 @@ public class BusinessClosure : BaseEntity
 
     [MaxLength(250)]
     public string? Reason { get; set; }
+
+    public static BusinessClosure CreateNew() => new();
+
+    public BusinessClosure SetStartTime(DateTime startTime)
+    {
+        StartTime = startTime;
+        return this;
+    }
+    public BusinessClosure SetEndTime(DateTime endTime)
+    {
+        EndTime = endTime;
+        return this;
+    }
+    public BusinessClosure SetReason(string? reason)
+    {
+        Reason = reason;
+        return this;
+    }
 }
