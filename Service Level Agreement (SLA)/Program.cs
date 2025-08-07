@@ -22,6 +22,8 @@ namespace Service_Level_Agreement__SLA_
 
             var app = builder.Build();
 
+            DbSeeder.Seed(app.Services);
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
