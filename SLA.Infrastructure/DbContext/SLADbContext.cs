@@ -19,11 +19,6 @@ public class SLADbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<BaseEntity>()
-           .Property(b => b.IsDeleted)
-           .HasDefaultValue(false);
-
-
         modelBuilder.Entity<Complaint>(entity =>
         {
             entity.Property(c => c.Priority);
@@ -45,5 +40,6 @@ public class SLADbContext : DbContext
             entity.Property(b => b.Reason).HasMaxLength(250);
         });
     }
+
 
 }

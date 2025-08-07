@@ -1,3 +1,5 @@
+﻿using SLA.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace Service_Level_Agreement__SLA_
 {
@@ -7,16 +9,19 @@ namespace Service_Level_Agreement__SLA_
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // ➕ Register DbContext
+            builder.Services.AddDbContext<SLADbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
             // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
