@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SLA.Application;
 using SLA.Domain;
 
 namespace SLA.Infrastructure;
 
-public class SLADbContext : DbContext
+public class SLADbContext : DbContext, IDbContext
 {
     public SLADbContext(DbContextOptions<SLADbContext> options) : base(options) { }
 

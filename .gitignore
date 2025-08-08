@@ -2,4 +2,70 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/SLA.Application/bin/Debug/net8.0
+/SLA.Application/obj
+/SLA.Domain/bin/Debug/net8.0
+/SLA.Domain/obj
+/SLA.Infrastructure/bin/Debug/net8.0
+/SLA.Infrastructure/obj
 /.vs
+/Service Level Agreement (SLA)/.vs/Service Level Agreement (SLA)
+/Service Level Agreement (SLA)/bin/Debug/net8.0
+/Service Level Agreement (SLA)/obj
+/Service Level Agreement (SLA)/.vs/ProjectEvaluation
+
+
+
+# === [ Angular / UI Project ] ===
+UI/Client/node_modules/
+UI/Client/dist/
+UI/Client/.angular/
+UI/Client/tmp/
+UI/Client/.cache/
+
+# Angular environment files (optional if they contain secrets)
+UI/Client/src/environments/*.ts
+!UI/Client/src/environments/environment*.ts
+
+# === [ OS Files ] ===
+.DS_Store
+Thumbs.db
+/node_modules
+/dist
+/tmp
+/out-tsc
+/.angular
+
+# Environment files
+/src/environments/*.ts
+!src/environments/environment*.ts
+
+# IDEs and editors
+/.vscode
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional cache folders
+/.npm
+/.cache
+/SLA Deadline Calculator/API/Service Level Agreement (SLA)/.vs
+/SLA Deadline Calculator/API/Service Level Agreement (SLA)/bin/Debug/net8.0
+/SLA Deadline Calculator/API/Service Level Agreement (SLA)/obj
+/SLA Deadline Calculator/API/SLA.Application/bin/Debug/net8.0
+/SLA Deadline Calculator/API/SLA.Application/obj
+/SLA Deadline Calculator/API/SLA.Domain/bin/Debug/net8.0
+/SLA Deadline Calculator/API/SLA.Domain/obj
+/SLA Deadline Calculator/API/SLA.Infrastructure/bin/Debug/net8.0
+/SLA Deadline Calculator/API/SLA.Infrastructure/obj
+/SLA Deadline Calculator/UI/Client/.vscode
