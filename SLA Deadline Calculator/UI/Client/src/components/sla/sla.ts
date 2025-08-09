@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { SlaService } from '../../services/sla';
 
 @Component({
   selector: 'app-sla',
-  templateUrl: './sla.component.html',
-  styleUrls: ['./sla.component.scss']
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './sla.html',
+  styleUrls: ['./sla.scss']
 })
 export class SlaComponent implements OnInit {
   slaList: any[] = [];
   newSla: any = { name: '', deadline: '' };
 
-  constructor(private slaService: SlaService) {}
+  constructor(private slaService: SlaService) { }
 
   ngOnInit(): void {
     this.loadData();
