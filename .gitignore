@@ -69,3 +69,4 @@ pnpm-debug.log*
 /SLA Deadline Calculator/API/SLA.Infrastructure/bin/Debug/net8.0
 /SLA Deadline Calculator/API/SLA.Infrastructure/obj
 /SLA Deadline Calculator/UI/Client/.vscode
+SLA Deadline Calculator/.config/dotnet-tools.json
