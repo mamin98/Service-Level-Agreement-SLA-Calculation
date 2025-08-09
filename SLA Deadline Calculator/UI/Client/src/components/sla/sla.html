@@ -1,0 +1,11 @@
+<h2>SLA List</h2>
+<ul>
+  <li *ngFor="let sla of slaList">
+    {{ sla.name }} - {{ sla.deadline }}
+  </li>
+</ul>
+
+<h3>Add SLA</h3>
+<input [(ngModel)]="newSla.name" placeholder="Name" />
+<input [(ngModel)]="newSla.deadline" placeholder="Deadline" />
+<button (click)="addSla()">Add</button>
