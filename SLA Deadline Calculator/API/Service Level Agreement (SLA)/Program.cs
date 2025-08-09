@@ -16,7 +16,6 @@ public class Program
         );
 
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-        builder.Services.AddScoped(typeof(ICalculateSlaService), typeof(CalculateSlaService));
 
         // Add services to the container.
 
