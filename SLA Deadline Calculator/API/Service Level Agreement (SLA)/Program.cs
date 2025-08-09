@@ -1,5 +1,6 @@
-﻿using SLA.Infrastructure;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using SLA.Application;
+using SLA.Infrastructure;
 
 namespace Service_Level_Agreement__SLA_
 {
@@ -11,8 +12,11 @@ namespace Service_Level_Agreement__SLA_
 
             // ➕ Register DbContext
             builder.Services.AddDbContext<SLADbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
 
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            builder.Services.AddScoped(typeof(ICalculateSlaService), typeof(CalculateSlaService));
 
             // Add services to the container.
 
