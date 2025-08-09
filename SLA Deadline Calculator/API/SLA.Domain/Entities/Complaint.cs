@@ -1,4 +1,3 @@
-
 using System.ComponentModel.DataAnnotations;
 
 namespace SLA.Domain;
@@ -21,16 +20,16 @@ public class Complaint : BaseEntity
         Priority = priority;
         return this;
     }
+
     public Complaint SetCapturedAt(DateTime capturedAt)
     {
         CapturedAt = capturedAt;
         return this;
     }
+
     public Complaint SetResolutionDeadline(DateTime? resolutionDeadline)
     {
         ResolutionDeadline = resolutionDeadline;
         return this;
     }
-
 }
-

@@ -4,17 +4,14 @@ using SLA.Domain;
 
 namespace SLA.Infrastructure;
 
-public class SLADbContext : DbContext, IDbContext
+public class SLADbContext(DbContextOptions<SLADbContext> options) : DbContext(options), IDbContext
 {
-    public SLADbContext(DbContextOptions<SLADbContext> options) : base(options) { }
-
     public DbSet<Complaint> Complaints { get; set; }
     public DbSet<WorkingHour> WorkingHours { get; set; }
     public DbSet<BusinessClosure> BusinessClosures { get; set; }
 
-    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        => base.SaveChangesAsync(cancellationToken);
-
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) =>
+        base.SaveChangesAsync(cancellationToken);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -41,6 +38,4 @@ public class SLADbContext : DbContext, IDbContext
             entity.Property(b => b.Reason).HasMaxLength(250);
         });
     }
-
-
 }

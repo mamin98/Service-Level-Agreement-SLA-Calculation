@@ -1,15 +1,12 @@
-
 using SLA.Domain;
 
 namespace SLA.Application;
 
 public record ComplaintRequestDto(PriorityType Priority, DateTime CaptureDateTime)
 {
-    public Complaint ToEntity()        
+    public Complaint ToEntity()
     {
-        return Complaint.CreateNew()
-            .SetPriority(Priority)
-            .SetCapturedAt(CaptureDateTime);
+        return Complaint.CreateNew().SetPriority(Priority).SetCapturedAt(CaptureDateTime);
     }
 };
 

@@ -2,6 +2,7 @@
 using SLA.Domain;
 
 namespace SLA.Application;
+
 public interface IDbContext
 {
     DbSet<Complaint> Complaints { get; }

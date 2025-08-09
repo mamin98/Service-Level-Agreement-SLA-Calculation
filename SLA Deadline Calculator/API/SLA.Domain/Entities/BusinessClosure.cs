@@ -1,7 +1,7 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SLA.Domain;
+
 public class BusinessClosure : BaseEntity
 {
     [Required]
@@ -20,11 +20,13 @@ public class BusinessClosure : BaseEntity
         StartTime = startTime;
         return this;
     }
+
     public BusinessClosure SetEndTime(DateTime endTime)
     {
         EndTime = endTime;
         return this;
     }
+
     public BusinessClosure SetReason(string? reason)
     {
         Reason = reason;
