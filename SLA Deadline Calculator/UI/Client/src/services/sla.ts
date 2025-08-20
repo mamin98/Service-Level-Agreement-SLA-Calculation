@@ -8,11 +8,12 @@ export class SlaService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
-  }
-
-  create(sla: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl, sla);
+  calculateDeadline(request: any): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/calculate-deadline`, {
+      params: {
+        priority: request.priority,
+        captureDateTime: request.captureDateTime
+      }
+    });
   }
 }
